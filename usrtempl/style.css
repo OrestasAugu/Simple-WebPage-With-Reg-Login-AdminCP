@@ -1,0 +1,323 @@
+@charset "utf-8";
+body {
+ background-color:#f7f8fe;
+ margin:1px auto;
+}
+header, footer, section, aside, nav, article {display: block;}
+h2#titlusr {
+ font-family:"Georgia", "Lucida Sans", "Arial", sans-serif;
+ color:#0101da;
+}
+.sb {font-weight:bold;}
+/* Button */
+#log_form a, #getallusr a {
+background-color:#8f9fde;
+padding:.2em .5em;
+text-decoration:none;
+color:#fff;
+box-shadow:.15em .13em .25em #6789da inset;
+-webkit-box-shadow:.15em .13em .25em #6789da inset;
+-moz-border-radius:.5em;
+-webkit-border-radius:.5em;
+-khtml-border-radius:.5em;
+border-radius:.5em;
+ background-image: -ms-linear-gradient(top, #5d8fda, #bfc0fe);     /* IE10 */
+ background-image:-moz-linear-gradient(top, #5d8fda, #bfc0fe 95%);     /* Mozilla */
+ /* for Safari, Chrome */
+ background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #5d8fda), color-stop(0.9, #bfc0fe));
+ background-image: -o-linear-gradient(top, #5d8fda, #bfc0fe);          /* Opera 11.1+ */
+ background: linear-gradient(top, #5d8fda, #bfc0fe);          /* W3C Markup */
+}
+#log_form a:hover, #loged a:hover, #getallusr a:hover {
+ background:#fefe01;
+ color:#0101ed;}
+
+
+/* "Loading..." notification, errors, verification code */
+#loading {
+ margin:1px auto;
+ background-color:#f7f8fe;
+ text-align:center;
+ font-size:18px;
+ color:#01cd01;
+}
+.eror {
+ border:1px solid #da0708;
+ background-color:#f7f8fe;
+ padding:3px;
+ font-size:15px;
+ color:red;
+}
+#codev0 {
+ font-size:18px;
+ font-weight:bold;
+ letter-spacing:1px;
+ color:#0101da;
+}
+
+/* Login Form */
+#log_form, #loged {
+ position:absolute;
+ top:1px;
+ right:3px;
+ margin:0px 1px 0px auto;
+ max-width:260px;
+ border:2px ridge #a3a3fe;
+ background-color:#c7c8fe;
+ padding:3px;
+ font-family:"Arial", sans-serif;
+ font-size:12px;
+ z-index:999;
+ background-image: -ms-linear-gradient(top, #efeffe, #c8c9f9);     /* IE10 */
+ background-image:-moz-linear-gradient(top, #efeffe, #c8c9f9);     /* Mozilla */
+ /* for Safari, Chrome */
+ background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #efeffe), color-stop(1, #c8c9f9));
+ background-image: -o-linear-gradient(top, #efeffe, #c8c9f9);          /* Opera 11.1+ */
+ background: linear-gradient(top, #efeffe, #c8c9f9);          /* W3C Markup */
+ -moz-border-radius:11px;
+ -webkit-border-radius:11px;
+ -khtml-border-radius:11px;
+ border-radius:11px;
+}
+#log_form label { font-weight:bold;}
+#log_form #email { margin-left:22px;}
+#log_form #lrem {font-size:10px;}
+#log_form div.sb {
+ margin:5px auto;
+ text-align:center;
+ text-decoration:underline;
+}
+#log_form #fblogin, #log_form #yhlogin, #log_form #gologin {
+ margin:2px 3% 2px 2.5%;
+}
+#log_form a {
+ margin:0px 18px auto 12px;
+ font-size:13px;
+}
+#log_form button {margin:0px 15px; letter-spacing:0.5px; font-weight:bold;}
+#log_form button:hover {background-color:white;}
+#log_form #jslog {
+ -moz-border-radius:11px;
+ -webkit-border-radius:11px;
+ -khtml-border-radius:11px;
+ border-radius:11px;
+}
+#log_form input[type="submit"] {
+ font-weight:800;
+ color:#000189;
+}
+#log_form #linkreg {
+ font-weight:800;
+}
+#loged #idpp {font-size:14px;}
+
+/* Registration Form */
+#form_re, #usrform1, #usrform2 {
+ margin:3% auto;
+ width:440px;
+ background-color:#efeffe;
+ border:2px solid #c7c8fe;
+ padding:4px 6px;
+}
+#form_re label { font-weight:bold; }
+#form_re h2 {
+ font-size:22px;
+ text-decoration:underline;
+ letter-spacing:1px;
+ color:blue;
+}
+#form_re h3 {
+ position:absolute;
+ top:28px;
+ left:38%;
+ font-family:"Georgia", "Lucida Sans", "Arial", sans-serif;
+ font-size:14px;
+ text-decoration:underline;
+ letter-spacing:1px;
+ color:#01da08;
+}
+
+.clslogin { /* close button */
+ position:absolute;
+ bottom:-5px; right:-5px;
+ background-color:white;
+ border:2px white;
+ padding:2px;
+ font-family:Arial;
+ font-size:15px;
+ color:red;
+ -moz-border-radius:7px;
+ -webkit-border-radius:7px;
+ -khtml-border-radius:7px;
+ border-radius:7px;
+}
+
+/* For ddBox in JS */
+#adbox{
+position:fixed;
+z-index:9990;
+top:0px; left:0px;
+margin:0px;
+width:100%;
+height:100%;
+text-align:center;
+padding:0px;
+}
+#adbox #adbox_transp {
+position:absolute;
+top:0; right:0; bottom:0; left:0;
+width:100%;
+height:100%;
+background-color:black;
+filter:alpha(opacity=75);
+-moz-opacity:0.75;
+-khtml-opacity:0.75;
+opacity:0.75;
+}
+#adbox #adbox_show {
+position:relative;
+z-index:9992;
+margin:5px auto;
+width:95%;
+border:2px solid silver;
+padding:8px 4px;
+background-color:#e8e8fe;
+}
+#adbox_ifr {
+ width:98%;
+ height:55%;
+ border:none;
+}
+#adbox .clsadbox {
+ position:absolute;
+ top:-4px;
+ right:-4px;
+ background-color:white;
+ border:2px solid red;
+ padding:2px;
+ font-family:Arial;
+ font-size:16px;
+ color:red;
+ -moz-border-radius:7px;
+ -webkit-border-radius:7px;
+ -khtml-border-radius:7px;
+ border-radius:7px;
+}
+/* Right bar - Total /Online Users */
+#rightusr {
+ position:absolute;
+ width:200px;
+ right:8px;
+}
+#userss {
+ margin:0px auto 8px auto;
+ border:1px dotted #a1a2fe;
+ background-color:#f9f9fe;
+ padding:2px 4px;
+ font-family:"Calibri", "Arial", sans-serif;
+ font-size:14px;
+ -moz-border-radius:15px;
+ -webkit-border-radius:15px;
+ -khtml-border-radius:15px;
+ border-radius:15px;
+}
+#rightusr #userss h5 { margin:4px auto; }
+#rightusr #userss a { padding:1px 2px; }
+#userss a:hover, #userss #allusr:hover  {
+ background-color:#fefe01;
+ text-decoration:none;
+ font-weight:bold;
+ color:#01b801;
+}
+#rightusr #allusr {
+ font-family:"Calibri", "Arial", sans-serif;
+ font-size:15px;
+ text-decoration:underline;
+ letter-spacing:1px;
+ color:blue;
+}
+
+/*All users page*/
+#getallusr {
+ margin:.8em auto;
+}
+#getallusr a {
+ margin:0 1em;
+ font-size:1.1em;
+ background-image: -ms-linear-gradient(top, #012345, #e0e8fe);     /* IE10 */
+ background-image:-moz-linear-gradient(top, #012345, #e0e8fe);     /* Mozilla */
+ /* for Safari, Chrome */
+ background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #012345), color-stop(0.9, #e0e8fe));
+ background-image: -o-linear-gradient(top, #012345, #e0e8fe);          /* Opera 11.1+ */
+ background: linear-gradient(top, #012345, #e0e8fe);          /* W3C Markup */
+}
+#getallusr a.etabvi {
+ background:#d1fdd2;
+ border:1px solid #b7f3b8;
+ -moz-border-radius:1px;
+ -webkit-border-radius:1px;
+ -khtml-border-radius:1px;
+ border-radius:1px;
+ color:#0001b8;
+}
+#dvfindusr {
+ margin:1em 10em 1em .2em;
+ padding:0;
+}
+#dvfindusr label { font-weight:800; }
+#allusers {
+ text-align:center;
+}
+#allusers .btndel {
+ margin-top:1em;
+ text-align:right;
+ padding-right:2em;
+}
+#allusers table {
+ margin:8px auto 3px auto;
+ min-width:500px;
+ border-bottom:1px solid #888888;
+ padding:0px 12px;
+ font-family:"Calibri", "Arial", sans-serif;
+ font-size:14px;
+}
+#allusers table thead { background-color:#daedfe; }
+#allusers table thead th { border:1px solid #888888; padding:2px; }
+#allusers table tbody { background-color:#f9f9fe; }
+#allusers table tbody a { font-weight:bold; }
+#allusers table .tr0 { background-color:#e0fae1; }
+#allusers table tbody td { border-left:1px dotted #888888; border-right:1px dotted #888888; padding:2px; }
+/* Pagination links inll users page */
+#allusers .linkspg {
+  position:relative;
+  margin:8px 55px 0px 135px;
+  background-color:#deedfe;
+  text-align:right;
+  padding:1px 18px 1px 8px;
+  font-size:15px;
+ -moz-border-radius:6px;
+ -webkit-border-radius:6px;
+ -khtml-border-radius:6px;
+ border-radius:6px;
+}
+#allusers  .linkspg a {
+  padding:1px 2px;
+  font-weight:bold;
+  color:blue;
+}
+#allusers  .linkspg a:hover {
+  background-color:#5555de;
+  text-decoration:underline;
+  color:white;
+}
+#allusers .linkspg span.sb {
+ background-color:#00b001;
+ text-decoration:underline;
+ color:white;
+ padding:0 .15em;
+}
+
+#usrdat #forupimg, #usrdat #sendimg, #ultabs { display:none; }
+#log_form button, #log_form #fblogin, #log_form #yhlogin, #log_form #gologin, #allusr, #dvfindusr label, #ultabs li , #usrdat #imgusr, #forupimg, .clslogin, .clsadbox {cursor:pointer;}
+#log_form, #usrdat, #usrform1 h4, #usrform2 h4, #dateopt .usropt {text-align:left;}
+body, #loged, #logeror, #form_re, .clslogin, .clsadbox {text-align:center;}
